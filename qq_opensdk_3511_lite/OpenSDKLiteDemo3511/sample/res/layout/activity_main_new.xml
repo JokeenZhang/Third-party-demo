@@ -1,0 +1,272 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="25dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="25dp" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/login_tip"
+                    style="@style/DemoMainActivity_Button_Title_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/app_main_login"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/login_tip"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/user_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:id="@+id/user_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:textColor="#80505050"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/new_login_btn"
+                    style="@style/DemoMainActivity_Button_Style"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/ck_qr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="支持扫码"/>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/check_permission_granted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="初始化用户是否已授权"/>
+
+            <CheckBox
+                android:id="@+id/check_force_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="强制扫码登录「无论是否安装qq」"/>
+
+            <CheckBox
+                android:id="@+id/check_oem_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OEM登录"/>
+
+            <CheckBox
+                android:id="@+id/show_web_download_ui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_show_web_download_ui"/>
+
+            <!---->
+
+            <Button
+                android:id="@+id/server_side_login_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/clear_qq_app_info_cache_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="重置互联SDK获取的QQ/Tim安装信息"
+                />
+
+            <Button
+                android:id="@+id/check_token_valid"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Token是否有效，不拉起手Q缓存信息登录"/>
+
+
+            <TextView
+                style="@style/DemoMainActivity_Button_Title_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="分享到QQ和QQ空间" />
+
+            <Button
+                android:id="@+id/main_qqShare_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_main_qq_share" />
+
+            <Button
+                android:id="@+id/main_qzoneShare_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_main_qzon_share" />
+
+            <TextView
+                style="@style/DemoMainActivity_Button_Title_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="设置QQ头像与图片收藏" />
+            <Button
+                android:id="@+id/main_avatar_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_main_set_avatar" />
+
+            <Button
+                android:id="@+id/main_emotion_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_main_set_emotion" />
+            <TextView
+                style="@style/DemoMainActivity_Button_Title_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="IM能力" />
+            <Button
+                android:id="@+id/main_aio_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_main_texting" />
+
+            <Button
+                android:id="@+id/main_audio_chat_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_main_audio_chat" />
+
+            <Button
+                android:id="@+id/main_video_chat_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_main_video_chat" />
+
+            <TextView
+                style="@style/DemoMainActivity_Button_Title_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/app_main_mini_app" />
+
+            <Button
+                android:id="@+id/main_mini_app_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_main_jump_mini_app" />
+
+            <TextView
+                style="@style/DemoMainActivity_Button_Title_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/app_main_auth_manage" />
+
+            <Button
+                android:id="@+id/open_auth_page_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_main_open_auth_page" />
+
+            <TextView
+                style="@style/DemoMainActivity_Button_Title_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="其他能力" />
+
+            <Button
+                android:id="@+id/main_sso_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_main_is_support_sso_login" />
+
+            <Button
+                android:id="@+id/main_getInfo_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_main_get_user_info" />
+
+            <Button
+                android:id="@+id/app_get_unionid"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_get_unionid" />
+
+            <Button
+                android:id="@+id/main_is_qq_installed_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_main_is_qq_installed" />
+
+            <Button
+                android:id="@+id/main_others_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_main_others" />
+
+            <Button
+                android:id="@+id/main_qqgroup_btn"
+                style="@style/DemoMainActivity_Button_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_main_qqgroupp_api" />
+
+
+            <!---->
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

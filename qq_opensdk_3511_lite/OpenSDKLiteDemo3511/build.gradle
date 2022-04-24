@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        maven{ url "https://mirrors.tencent.com/nexus/repository/maven-public/" }
+        maven{ url "http://maven.oa.com/nexus/content/repositories/android" }
+        maven{ url "http://mirrors.tencent.com/repository/maven/thirdparty-snapshots/" }
+        maven{ url "http://maven.oa.com/nexus/content/repositories/jcenter" }
+        maven{ url "http://maven.oa.com/nexus/content/groups/androidbuild" }
+        maven{ url "http://mirrors.tencent.com/repository/maven/thirdparty" }
+        maven{ url "https://mirrors.tencent.com/repository/maven/QQOpenSDK"}
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.1'
+    }
+}
+
+allprojects {
+    repositories {
+        maven{ url "https://mirrors.tencent.com/nexus/repository/maven-public/" }
+        maven{ url "http://maven.oa.com/nexus/content/repositories/android" }
+        maven{ url "http://mirrors.tencent.com/repository/maven/thirdparty-snapshots/" }
+        maven{ url "http://maven.oa.com/nexus/content/repositories/jcenter" }
+        maven{ url "http://maven.oa.com/nexus/content/groups/androidbuild" }
+        maven{ url "http://mirrors.tencent.com/repository/maven/thirdparty" }
+        maven{ url "https://mirrors.tencent.com/repository/maven/QQOpenSDK"}
+    }
+}
+
+task clean(type: Delete) {
+    println 'clean...'
+    delete rootProject.buildDir
+}
